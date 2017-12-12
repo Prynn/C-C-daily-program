@@ -40,4 +40,26 @@ int main()
     puts(b);
     return 0;
 }
+4.#include<stdio.h>
+
+int main()
+{
+    char a[30],b[30];
+    int i=0,j=0;
+    gets(a);
+    while(a[i]!='\0')
+    {
+        if((a[i]>='0'&&a[i]<='9')||(a[i]>='a'&&a[i]<='z')||(a[i]>='A'&&a[i]<='Z'))
+            ;
+        else
+        {
+            b[j]=a[i];
+            j++;
+        }
+        i++;
+    }
+    b[j]='\0';      没有这个为什么不行  错在了哪里
+    puts(b);
+    return 0;
+}
 
