@@ -27,7 +27,7 @@ int compress(char array[], int count[])
     i = 0;
     while(1)
     {
-        if(array[i]!='\0')
+        if(array[i] != '\0')    //这里 if (array[i] != NULL) 也通过
         {
         if(array[i]==is_one_ahead)
             count[tail]++;
@@ -40,6 +40,6 @@ int compress(char array[], int count[])
             break;
         i++;
       }
-      return tail;
+      return tail;         //函数中出来传输指针所指来给主程序传数外，别忘了将函数类型设置为非空并利用return
 //end
 }
