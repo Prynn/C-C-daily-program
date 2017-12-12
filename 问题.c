@@ -24,3 +24,20 @@ int main()
     return 0;
 }
 2.null和\0
+3.#include<stdio.h>              
+
+int main()
+{
+    int m,i;
+    char a[100],b[100];     如果输入的数组非常大怎么办
+    gets(a);
+    scanf("%d",&m);
+    for(i=0;i<m;i++)
+        b[i]=a[i];
+    for(i=m;i<100;i++)
+        b[i-1]=a[i];
+        printf("The new string is :\n");
+    puts(b);
+    return 0;
+}
+
