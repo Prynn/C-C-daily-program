@@ -29,7 +29,7 @@ int main()
    func(grade,n);
    for(i=n-1;i>=0;i--)
    {
-       printf("%.1f ",grade[i]);
+       printf("%g ",grade[i]);   %g可以小数整数混合输出
    }
     return 0;
 }
