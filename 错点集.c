@@ -40,3 +40,33 @@ int main()
 3.记得用n=strlen(str);
 char c[100];
 给c赋值"123456"之后   strlen(str)=6而不是100(初始赋的空间)；       和'\0'有关；
+4.#include <stdio.h>
+#include <stdlib.h>
+double func(int b[],int n)
+{
+    int min,i,max,a,j;
+    double aver=0.0;
+    min=b[0];
+    for(j=1;j<n;j++)
+    {
+        if(min>b[j])
+        {
+            i=j;
+        }
+    }
+    max=b[0];
+    for(j=1;j<n;j++)
+    {
+        if(max<b[j])
+        {
+            a=j;
+        }
+    }
+    b[i]=0;
+    b[a]=0;
+    for(j=0;j<n;j++)                         循环量写成了i，和循环体内不对应；
+    {
+        aver+=b[j];
+    }
+    return (aver/(n-2));
+}
