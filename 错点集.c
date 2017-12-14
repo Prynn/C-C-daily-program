@@ -37,3 +37,6 @@ int main()
     }
     return 0;
 }
+3.记得用n=strlen(str);
+char c[100];
+给c赋值"123456"之后   strlen(str)=6而不是100(初始赋的空间)；       和'\0'有关；
