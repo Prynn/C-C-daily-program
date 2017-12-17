@@ -32,3 +32,5 @@
                 strcat(str1,str2);    
       (4)比较strcmp:
                 strcmp(str1,str2);//依据ASCII码，返回值>0,<0,=0;
+6.scanf
+    
