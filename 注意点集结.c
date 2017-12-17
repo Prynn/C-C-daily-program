@@ -14,6 +14,21 @@
     2)定义：   char *p; p="abc";       
                *p="def";//用指针定义不能够修改；
               char p[]="abc";//可以修改；若char p[100]="abc";那么余下的空间全是'\0';
-
-
-    
+    3)字符串的读写：
+            char str[10];
+            scanf("%c",str);//不需要&，str是数组名，把str当作指针来处理；scanf会跳过空白符并直到遇到空白符为止，并在末尾自动补加'\0'；
+                            //scanf读入的字符串永远不包含空白字符；
+            gets(str);//不会跳过空白字符，并且只遇到换行符才停止，空格不停止；
+    4)<string.h>中包含的常用函数：
+      (1)计算长度strlen:
+                int len;    len=strlen("abc");
+                char a[10]="abc";   len=strlen(a);//不包括'\0';
+      (2)复制strcpy:
+                strcpy(str1,str2); //将str2复制给str1,返回值是str1;
+                strcpy(str1,"abcd");//str1 = "abcd";这是错的；
+                strcpr(str1,strcpy(str2,"abcd"));//利用返回值；
+      (3)拼接strcat:
+                strcat(str1,"abc");//返回拼接后的字符串；
+                strcat(str1,str2);    
+      (4)比较strcmp:
+                strcmp(str1,str2);//依据ASCII码，返回值>0,<0,=0;
