@@ -59,3 +59,34 @@ int main()
     }
     return 0;
 }
+2.提取指定位置字符
+#include <stdio.h>
+#include <stdlib.h>
+
+void func(char *str,char *p,int m,int n)
+{
+    int i,j;
+    for(i=0,j=0;str[i]!='\0';i++)
+    {
+        if(i>=m-1&&i<=n-1)
+        {
+            p[j] = str[i];
+            j++;
+        }
+    }
+    p[j]='\0';
+}
+int main()
+{
+    char str[100];
+    char p[100];
+    int m,n;
+    while(scanf("%s",str)!=-1)
+    {
+        scanf("%d%d",&m,&n);
+        func(str,p,m,n);
+        printf("%s\n",p);
+    }
+    return 0;
+}
+
