@@ -48,3 +48,22 @@ int main()
     }
     return 0;
 }
+冒泡排序：
+void sort1(char **pp,int n)
+{
+     int i,j;
+    char t[20];
+    for(i=0;i<n-1;i++)
+    {
+        for(j=0;j<n-i-1;j++)
+        {
+            if(strcmp(pp[j],pp[j+1])>0)  设str1，str2，若str1==str2，则返回零；若str1<str2，则返回负数；若str1>str2，则返回正数。
+            {                                                              所以绝对比较的条件绝对不能是if(strcmp(pp[j],pp[j+1])>0)
+                strcpy(t,pp[j]);
+                strcpy(pp[j],pp[j+1]);
+                strcpy(pp[j+1],t);
+            }
+        }
+    }
+}
+
