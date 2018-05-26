@@ -17,3 +17,6 @@ gets(s)函数与scanf(“%s”,s)相似，但不完全相同，
 但gets()函数将接收输入的整个字符串直到遇到换行为止。 
 也就是说：gets()函数读取到\n（我们输入的回车）于是停止读取，但是它不会把\n包含到字符串里面去。
 然而，和它配合使用的puts函数，却在输出字符串的时候自动换行。
+
+ scanf("%s%d%d %c %c%d", stu[i].name, &stu[i].final_score, &stu[i].class_score, &stu[i].leader_or_not,  &stu[i].west_or_not,&stu[i].paper_num);
+//这里只有char的输入需要在格式控制里面给空格  其他会自动将空格视为空；
